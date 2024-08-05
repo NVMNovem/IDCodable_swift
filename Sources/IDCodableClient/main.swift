@@ -1,8 +1,16 @@
+import Foundation
 import IDCodable
 
-let a = 17
-let b = 25
+@IDCodable
+enum Itemgroup {
+    
+    @Codable(id: "M5Q1Q7CA7P", codable: "Test 1") case TEST_1
+    @Codable(id: "OA1G29Y2D5", codable: "Test 2") case TEST_2
+}
 
-let (result, code) = #stringify(a + b)
-
-print("The value \(result) was produced by the code \"\(code)\"")
+@IDCodable
+enum Status {
+    
+    @Codable(id: "TB4AKAOM84", codable: 1) case created
+    @Codable(id: "DJX3SZZVCN", codable: 2) case started
+}
